@@ -1,0 +1,65 @@
+﻿
+@model PaginaWeb.Models.TablaViewModel
+     List<PaginaWeb.Models.Curso>
+    @{
+        ViewBag.Title = "Contact";
+    }
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <h1>Datos Cursos</h1>
+        <img src="~/Imagenes/LogoU.jpg" class="brand_logo" />
+        <div class="container">
+            <div class="row">
+                <a href="#" class="btn btn-primary">REGISTRAR ALUMNO</a>
+
+                <form action="@Url.Action("EliminarCurso","Home")" method="post">
+                    <b>ID: </b><input type="text" name="IdCurso" />
+                    <input type="submit" value="Eliminar" name="enviar" class="btn btn-info" />
+                </form>
+                <form action="@Url.Action("Contact","Home")" method="post">
+                    <b>Nombre: </b><input type="text" name="NombreCurso" />
+                    <input type="submit" value="Buscar" name="enviar" class="btn btn-info" /> <span></span>
+                </form>
+            </div>
+            <br>
+            <div class="row table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Codigo</th>
+                            <th>Curso</th>
+                            <th>Credito</th>                         
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var registro in Model.Tabla3)
+                        {
+                            <tr>
+
+                                <td>@registro.IdCurso</td>
+                                <td>@registro.Codigo</td>
+                                <td>@registro.NombreCurso</td>
+                                <td>@registro.Creditos</td>
+
+                                <td><a href=""><span class="glyphicon glyphicon-pencil"></span></a></td>
+                                <td>
+                                </td>
+
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+    </body>
+

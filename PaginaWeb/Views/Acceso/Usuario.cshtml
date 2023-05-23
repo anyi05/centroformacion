@@ -1,0 +1,136 @@
+﻿@model PaginaWeb.Models.TablaViewModel
+    @{
+        Layout = null;
+    }
+
+    <head>
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <link href="~/Content/css/Usuario.css" rel="stylesheet" />
+    </head>
+    <body>
+        <br><br>
+        <div class="row user-infos cyruxx">
+            <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xs-offset-0 col-sm-offset-0 col-md-offset-1 col-lg-offset-1">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Informacion General</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-3 col-lg-3 hidden-xs hidden-sm">
+                                <img class="img-circle"
+                                     src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=100"
+                                     alt="User Pic">
+                            </div>
+                            <div class="col-xs-2 col-sm-2 hidden-md hidden-lg">
+                                <img class="img-circle"
+                                     src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=50"
+                                     alt="User Pic">
+                            </div>
+                            <div class=" col-md-9 col-lg-9 hidden-xs hidden-sm">
+                                <strong>Datos</strong><br>
+                                <table class="table table-user-information">
+                                     <thead>
+                                         <tr>
+                                             <th>Identificacion</th>
+                                             <th>Nombre</th>
+                                             <th>Primer Apellido</th>
+                                             <th>Segundo Apellido</th>
+                                         </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model.Tabla2)
+                                        {
+                                            <tr>
+                                                <td>@item.Identificacion</td>
+                                                <td>@item.Nombre</td>
+                                                <td>@item.PApellido</td>
+                                                <td>@item.SApelldo</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <button class="btn btn-sm btn-primary" type="button"
+                                data-toggle="tooltip"
+                                data-original-title="Send message to user">
+                            <i class="glyphicon glyphicon-envelope"></i>
+                        </button>
+                        <span class="pull-right">
+                            <button class="btn btn-sm btn-warning" type="button"
+                                    data-toggle="tooltip"
+                                    data-original-title="Edit this user">
+                                <i class="glyphicon glyphicon-edit"></i>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row user-infos user2">
+            <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xs-offset-0 col-sm-offset-0 col-md-offset-1 col-lg-offset-1">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Informacion Curso</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-3 col-lg-3 hidden-xs hidden-sm">
+                                <img class="img-circle"
+                                     src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=100"
+                                     alt="User Pic">
+                            </div>
+                            <div class="col-xs-2 col-sm-2 hidden-md hidden-lg">
+                                <img class="img-circle"
+                                     src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=50"
+                                     alt="User Pic">
+                            </div>
+                            <div class=" col-md-9 col-lg-9 hidden-xs hidden-sm">
+                                <strong>Datos</strong><br>
+                                <table class="table table-user-information">
+                                    <thead>
+                                        <tr>
+                                            <th>Codigo:</th>
+                                            <th>Curso:</th>
+                                            <th>Creditos:</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model.Tabla3)
+                                        {
+                                            <tr>
+                                                <td>@item.Codigo</td>
+                                                <td>@item.NombreCurso</td>
+                                                <td>@item.Creditos</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <button class="btn btn-sm btn-primary" type="button"
+                                data-toggle="tooltip"
+                                data-original-title="Send message to user">
+                            <i class="glyphicon glyphicon-envelope"></i>
+                        </button>
+                        <span class="pull-right">
+                            <button class="btn btn-sm btn-warning" type="button"
+                                    data-toggle="tooltip"
+                                    data-original-title="Edit this user">
+                                <i class="glyphicon glyphicon-edit"></i>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    </body>
+

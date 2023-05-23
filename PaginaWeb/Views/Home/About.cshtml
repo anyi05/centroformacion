@@ -1,0 +1,62 @@
+﻿@model PaginaWeb.Models.TablaViewModel
+    @{
+        ViewBag.Title = "About";
+    }
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <h1>Datos Alumnos</h1>
+        <img src="~/Imagenes/LogoU.jpg" class="brand_logo" />
+        <div class="container">
+            <div class="row">
+                <a href="#" class="btn btn-primary">REGISTRAR ALUMNO</a>
+                <p></p>
+                <form action="@Url.Action("EliminarAlumno","Home")" method="post">
+                    <b>ID: </b><input type="text" name="IdAlumno" />
+                    <input type="submit" value="Eliminar" name="enviar" class="btn btn-info" />
+                </form>
+                <form action="@Url.Action("About","Home")" method="post">
+                    <b>Nombre: </b><input type="text" name="Identificacion" />
+                    <input type="submit" value="Buscar" name="enviar" class="btn btn-info" /> <span></span>
+                </form>
+            </div>
+            <br>
+            <div class="row table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Identificacion</th>
+                            <th>Nombre</th>
+                            <th>PApellido</th>
+                            <th>SApellido</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Tabla2)
+                        {
+                            <tr>
+
+                                <td>@item.IdAlumno</td>
+                                <td>@item.Identificacion</td>
+                                <td>@item.Nombre</td>
+                                <td>@item.PApellido</td>
+                                <td>@item.SApelldo</td>
+                                <td><a href=""><span class="glyphicon glyphicon-pencil"></span></a></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+    </body>
+

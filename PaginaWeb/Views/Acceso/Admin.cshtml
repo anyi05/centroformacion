@@ -1,0 +1,66 @@
+﻿
+@model PaginaWeb.Models.TablaViewModel
+@{
+    ViewBag.Title = "Admin";
+}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Datos Usuario</h1>
+    <img src="~/Imagenes/LogoU.jpg" class="brand_logo" />
+    <p></p>
+    <div class="container">
+        <div class="row">
+            <a href="@Url.Action("Registrar","Acceso")" class="btn btn-primary">REGISTRAR USUARIO</a>
+            <p></p>
+            <form action="@Url.Action("EliminarDatos","Acceso")" method="post">
+                <b>ID: </b><input type="text" name="IdUsuario" />
+                <input type="submit" value="Eliminar" name="enviar" class="btn btn-info" />
+            </form>
+            <form action="@Url.Action("Admin","Acceso")" method="post">
+                    <b>Nombre: </b><input type="text" name="NombreCompleto" />
+                    <input type="submit"  value="Buscar" name="enviar" class="btn btn-info" /> <span></span>
+             </form>
+
+        </div>
+        <br>
+        <div class="row table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>NombreCompleto</th>
+                        <th>Correo</th>
+                        <th>Login</th>
+                        <th>Clave</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var registro in Model.Tabla1)
+                    {
+                        <tr>
+
+                            <td>@registro.IdUsuario</td>
+                            <td>@registro.NombreCompleto</td>
+                            <td>@registro.Correo</td>
+                            <td>@registro.Login</td>
+                            <td>@registro.Clave</td>
+
+                            <td><a href=""><span class="glyphicon glyphicon-pencil"></span></a></td>
+                            <td>
+                            </td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery.min.js"></script>
+
+</body>

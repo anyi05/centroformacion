@@ -1,0 +1,80 @@
+﻿body,
+.my-table {
+    width: 100%; /* Ancho de la tabla al 100% del contenedor */
+    border-collapse: collapse; /* Colapsa los bordes de las celdas */
+    background-color: #f8f8f8; /* Color de fondo de la tabla */
+}
+
+    .my-table th, .my-table td {
+        padding: 10px; /* Relleno interno de las celdas */
+        text-align: left; /* Alineación de texto a la izquierda */
+        border: 1px solid #ccc; /* Borde de las celdas */
+    }
+
+    .my-table th {
+        background-color: #ddd; /* Color de fondo de las celdas de encabezado */
+    }
+
+    .my-table tr:hover {
+        background-color: #ebebeb; /* Color de fondo de la fila al pasar el cursor */
+    }
+
+.button-container {
+    position: fixed; /* Posición fija */
+    bottom: 20px; /* Distancia desde la parte inferior */
+    right: 20px; /* Distancia desde la parte derecha */
+    display: flex; /* Mostrar los botones en una fila */
+    justify-content: flex-end; /* Justificar los botones a la derecha del contenedor */
+}
+
+.my-button {
+    display: block; /* Mostrar como bloque para ocupar todo el ancho del contenedor */
+    margin-left: 10px; /* Margen izquierdo entre los botones */
+    padding: 10px 20px; /* Relleno interno del botón */
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #fff; /* Color de texto del botón */
+    text-decoration: none; /* Sin decoración de texto */
+    border-radius: 4px; /* Bordes redondeados del botón */
+    font-size: 16px; /* Tamaño de fuente del botón */
+}
+
+    .my-button:hover {
+        background-color: #0056b3; /* Color de fondo del botón al pasar el cursor */
+    }
+
+.container {
+    position: fixed; /* Posición absoluta en relación con el elemento padre */
+    top: 10px; /* Desde la parte superior */
+    left: 300px; /* Desde la izquierda */
+    height: 50vh; /* Altura de 50% de la ventana del navegador */
+    background-color: red; /* Color de fondo para verificar el tamaño del contenedor */
+}
+
+    label, input {
+    display: inline-block; /* Para colocarlos en la misma línea */
+    vertical-align: middle; /* Para alinearlos verticalmente */
+}
+
+label {
+    font-weight: bold; /* Negrita en el texto del label */
+    margin-right: 5px; /* Espacio entre el label y el input */
+}
+
+.brand_logo {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+.center-top-left {
+    position: absolute;
+    top: 10px;
+    left: 100%;
+    transform: translateX(-100%);
+}
+
+
+
+
+
+
